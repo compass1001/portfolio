@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Nan Dong's Portfolio</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/colorbox.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>		
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('div.wrap-header a').bind('click',function(event){
+                var anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(anchor.attr('href')).offset().top
+                }, 1500,'easeInOutExpo');
+                /*
+                if you don't want to use the easing effects:
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1000);
+                */
+                event.preventDefault();
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+    <script>
+			$(document).ready(function(){
+				var windowHeight = $(window).height();
+				$('#section0, #section1, #section2, #section3, #section4').css('min-height',windowHeight);
+				
+				
+				//Examples of how to assign the ColorBox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"75%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+
+				$('.non-retina').colorbox({rel:'group5', transition:'none'})
+				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
+    
+</head>
+
+<body>
+<!--------------Header--------------->
+<div id="header">
+	<div class="wrap-header">
+		<div class="logo"><a href="#section0"><img src="./images/logo.png"/></a></div>
+        <div class="navigation">
+            <ul>
+                    <li><a href="#section1">Design</a></li>
+                    <li><a href="#section2">Projects</a></li>
+                    <li><a href="#section3">Resume</a></li>
+                    <li><a href="#section4">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-------------------------------------Cover----------------------------------------->
+<div id="section0">
+    <div id="cover">
+        <div class="cover_wrapper" >
+            <div id="selfintro"> 
+                Hi, my name is Nan Dong. I have 2 year practical experience in web design and development. Currently, I am a web developer at Casad Company, which deals in retailing promotional products, including table covers, koozies, lip balms, tote bags, etc. The platform the company websites are based on is Magento - a product of eBay Inc. My main responsibility is developing and theming the websites with php, jQuery, CSS/HTML/Javascript, and so forth. I worked as a web designer and developer at LSSCM( Legal Services of South Central Michigan) for a year. During my time there, I designed a couple of websites with Photoshop and Illustrator and then implemented them with Drupal.
+
+I graduated from School of Information, University of Michigan with a master's degree in Information Science. My specializations are Information Economics for Management and Social Computing, focusing on web community research and user experience studying.
+
+
+If you are interested to get connected, click HERE!
+            </div>
+                <div class="specialties">
+                    <div class="specialties-title">Fields of Interests and Specialties</div>
+                    <ul class="specialties-content">
+                        <li>Web Design</li>
+                        <li>Web Development</li>
+                        <li>Data Analysis</li>
+                        <li>User Interface Design and User Experience Design</li>
+                    </ul>
+                </div>    
+
+                
+        </div>
+    </div>
+</div>
+
+<div id="content">
+
+<!-------------------------------------Design----------------------------------------->
+<div class="section_design" id = "section1">
+    <div class="design">
+        <div>
+            <a class="group1" href="images/design/twitter-spring.jpg"><img src="images/design/thumbs/twitter-spring.jpg" /></a>
+            <a class="group1" href="images/design/twitter-summer.jpg"><img src="images/design/thumbs/twitter-summer.jpg" /></a>
+            <a class="group1" href="images/design/twitter-fall.jpg" ><img src="images/design/thumbs/twitter-fall.jpg" /></a>
+            <a class="group1" href="images/design/twitter-winter.jpg"><img src="images/design/thumbs/twitter-winter.jpg" /></a>
+        </div>
+        <div>
+            
+            <a class="group1" href="images/design/slider-1.jpg"><img src="images/design/thumbs/slider-1.jpg" /></a>       
+            <a class="group1" href="images/design/slider-2.jpg"><img src="images/design/thumbs/slider-2.jpg" /></a>
+            <a class="group1" href="images/design/slider-3.jpg"><img src="images/design/thumbs/slider-3.jpg" /></a>
+            <a class="group1" href="images/design/logo-snail.jpg"><img src="images/design/thumbs/logo-snail.jpg" /></a>
+         </div>
+         <div>   
+            <a class="group1" href="images/design/new_faculty_1.jpg"><img src="images/design/thumbs/new_faculty_1.jpg" /></a>
+            <a class="group1" href="images/design/new_faculty_2.jpg"><img src="images/design/thumbs/new_faculty_2.jpg" /></a>
+            <a class="group1" href="images/design/new_faculty_3.jpg"><img src="images/design/thumbs/new_faculty_3.jpg" /></a>
+            <a class="group1" href="images/design/new_faculty_4.jpg"><img src="images/design/thumbs/new_faculty_4.jpg" /></a>
+         </div>
+        <div>   
+            <a class="group1" href="images/design/new_faculty_5.jpg"><img src="images/design/thumbs/new_faculty_5.jpg" /></a>
+            <a class="group1" href="images/design/new_faculty_6.jpg"><img src="images/design/thumbs/new_faculty_6.jpg" /></a>
+            <a class="group1" href="images/design/banner.jpg"><img src="images/design/thumbs/banner.jpg" /></a>
+            
+        </div>
+    	<div>
+            <a class="group1" href="images/design/brochure-AA-1.jpg"><img src="images/design/thumbs/brochure-AA-1.jpg" /></a>
+            <a class="group1" href="images/design/brochure-AA-2.jpg"><img src="images/design/thumbs/brochure-AA-2.jpg" /></a> 
+            <a class="group1" href="images/design/brochure-XA-1.jpg"><img src="images/design/thumbs/brochure-XA-1.jpg" /></a>
+            <a class="group1" href="images/design/brochure-XA-2.jpg"><img src="images/design/thumbs/brochure-XA-2.jpg" /></a>
+  
+       </div>
+       
+        <div>
+          	<a class="group1" href="images/design/businesscard_1.jpg"><img style="max-width:11%" src="images/design/thumbs/businesscard_1.jpg" /></a>
+            <a class="group1" href="images/design/businesscard_2.jpg"><img style="max-width:11%" src="images/design/thumbs/businesscard_2.jpg" /></a>
+            <a class="group1" href="images/design/businesscard_3.jpg"><img src="images/design/thumbs/businesscard_3.jpg" /></a>
+            <a class="group1" href="images/design/snapcard-1.jpg"><img src="images/design/thumbs/snapcard-1.jpg" /></a>
+            <a class="group1" href="images/design/snapcard-2.jpg"><img src="images/design/thumbs/snapcard-2.jpg" /></a>
+          
+         </div>
+        <div>   
+            <a class="group1" href="images/design/HW8-1.jpg"><img src="images/design/thumbs/HW8-1.jpg" /></a>
+            <a class="group1" href="images/design/HW8-2.jpg"><img src="images/design/thumbs/HW8-2.jpg" /></a>
+            <a class="group1" href="images/design/HW8-3.jpg"><img src="images/design/thumbs/HW8-3.jpg" /></a>
+            <a class="group1" href="images/design/HW8-4.jpg"><img src="images/design/thumbs/HW8-4.jpg" /></a>
+            <a class="group1" href="images/design/website.jpg"><img src="images/design/thumbs/website.jpg" /></a>
+            <a class="group1" href="images/design/web-1.jpg"><img src="images/design/thumbs/web-1.jpg" /></a>
+            <a class="group1" href="images/design/520_final.jpg"><img src="images/design/thumbs/520_final.jpg" /></a> 
+            <a class="group1" href="images/design/midterm.jpg"><img src="images/design/thumbs/midterm.jpg" /></a>
+        </div>   
+            
+    	
+    	<div>
+        	
+            <a class="group1" href="images/design/postcard-1.jpg"><img src="images/design/thumbs/postcard-1.jpg" /></a>
+            <a class="group1" href="images/design/postcard-2.jpg"><img src="images/design/thumbs/postcard-2.jpg" /></a>
+            <a class="group1" href="images/design/postcard_1.jpg"><img src="images/design/thumbs/postcard_1.jpg" /></a>
+            <a class="group1" href="images/design/postcard_2.jpg"><img src="images/design/thumbs/postcard_2.jpg" /></a>
+            
+        </div>   
+         <div>
+         	<a class="group1" href="images/design/Folded-card-1.jpg"><img src="images/design/thumbs/Folded-card-1.jpg" /></a>
+            <a class="group1" href="images/design/Folded-card-2.jpg"><img src="images/design/thumbs/Folded-card-2.jpg" /></a>    
+          	<a class="group1" href="images/design/alpha.jpg"><img src="images/design/thumbs/alpha.jpg" /></a>
+            <a class="group1" href="images/design/poster.jpg"><img src="images/design/thumbs/poster.jpg" /></a>
+            
+            
+         </div>     
+   
+        <div>
+            
+            <a class="group1" href="images/design/logoguide-snail.jpg"><img src="images/design/thumbs/logoguide-snail.jpg" /></a>
+            <a class="group1" href="images/design/mobile-app.jpg"><img src="images/design/thumbs/mobile-app.jpg" /></a>
+            <a class="group1" href="images/design/icon-guide.jpg"><img src="images/design/thumbs/icon-guide.jpg" /></a>
+            <a class="group1" href="images/design/logo.jpg"><img src="images/design/thumbs/logo.jpg" /></a>
+                     
+        </div>   
+    </div>
+</div>
+<!-------------------------------------Projects----------------------------------------->
+<div class="section" id ="section2">
+    <div class="project">
+    	<div class="block_1">
+        	<a class='iframe' href="meji.html">Web Design & Development</a>
+        </div>
+    	<div class="block_2">
+        	<a class='iframe' href="mplp.html">Web Content Development & Testing</a>
+        </div>
+        <div class="block_3">
+        	<a class='iframe' href="ufida.html">Implementation Consulting</a>
+        </div>
+        <div class="block_4">
+        	<a class='iframe' href="694.html">Social Learning Platform</a>
+        </div>
+        <div class="block_5">
+        	<a class='iframe' href="501.html">Contextual Inquiry</a>
+        </div>
+        <div class="block_6">
+        	<a class='iframe' href="542.html">Depression Tracking App</a>
+        </div>
+        <div class="block_7">
+        	<a class='iframe' href="544.html">YouTube Video Analysis</a>
+        </div>
+        <div class="block_8">
+        	<a class='iframe' href="601.html">Data Manipulation and Analysis</a>
+		</div>
+        <div class="block_9">
+        	<a class='iframe' href="http://www-personal.umich.edu/~nandong/TicTacToe.html">Java: Tic-Tac-Toe</a>
+        </div>
+        <div class="block_10">
+           	<a class='iframe' href="http://www-personal.umich.edu/~nandong/Stars.html">Java: Starts</a>
+        </div>
+        <div class="block_11">
+        	<a class='iframe' href="http://www-personal.umich.edu/~nandong/Game.html">Java: Game</a>
+        </div>
+        <div class="block_12">
+            <a class='iframe' href="http://www-personal.umich.edu/~nandong/ChristmasTree.html">Java: Christmas Tree</a>
+        </div> 
+        
+    </div>
+</div>
+<!-------------------------------------Resume----------------------------------------->
+    <div class="section" id="section3">
+    	<div class="resume">
+        	<div class="col-1">
+            	<h1>NAN DONG</h1><a href="Resume_Nan Dong.pdf" target="_blank"><img src="images/download.png" /></a>
+                <p><h2>Education</h2></p>
+                <!------------------Education---------------->
+                	
+                <p><h3>University of Michigan, School of Information, Ann Arbor, MI</h3><date> May 2013</date></p>
+                <li>Master of Science in Information, Information Economics for Management (IEM) & Social Computing (SC)</li>
+                <h3>Beijing Jiaotong University (BJTU), School of Economics and Management, Beijing</h3><date>Jun. 2011</date>
+                <li>Bachelor of Management, Information Management and Information Systems</li>
+            	 <!-------------------Work Experience---------------->
+                <p><h2>Work Experience</h2></p>
+                <p><h3>Totallypromotional|Casad Company, Web Developer, Celina, OH</h3>
+                <date>Nov. 2013-Present</date></p>
+                 <ul>
+                    <li>Developing Magento Based websites</li>
+                </ul>
+                <p><h3>Legal Services of South Central Michigan, Web Designer and Developer Intern, Ann Arbor, MI</h3>
+                <date>June 2013-Nov. 2013</date></p>
+                <ul>
+                    <li>Designed and developed the website of <a href="http://elderdev.mplp.org/" target="_blank">Michigan Elder Justice Initiative</a></li>
+                    <li>Maintained the websites administrated by Michigan Poverty Law Program (SEO)</li>
+                </ul>
+                <p><h3>Legal Services of South Central Michigan, Web Content Development Intern, Ann Arbor, MI</h3>
+                <date>Feb. 2013-Apr. 2013</date></p>
+                <ul>
+                    <li>Designed and developed the website of <a href="http://briefbankdev.mplp.org/" target="_blank">Brief Bank</a></li>
+                    <li>Assisted in uploading new content to the Michigan Legal Help website</li>
+					<li>Assisted in conducting quality assurances measures of web content</li>
+					<li>Tested topical legal interviews created using HotDocs and A2J</li>
+					<li>Updated the Drupal modules of the websites administrated by MPLP</li>
+                </ul>
+                
+                <p><h3>UFIDA Government Affairs Software Co. Ltd., Implementation Consultant, Beijing</h3>
+                <date>Jun. 2012-Aug. 2012</date></p> 
+                <ul>											      
+                    <li>Assisted the customers in deploying and using the financial software</li>
+                    <li>Used SQL Plus to investigate the problems raised by customers</li>
+                    <li>Tested the software periodically and created test reports</li>
+                    <li>Created a user guide for the financial system</li>
+                </ul>
+                <p><h3>Museum of Chinese in America, Intern, New York, NY</h3>
+                <date>Feb. 2012-Mar. 2012</date></p>                           
+                <ul>
+                    <li>Utilized the software of Archivists’ Toolkit to make Finding Aids</li>
+                </ul>
+                <!-------------------client-based projects---------------->
+                <p><h2>Academic Projects</h2></p>
+                <p><h3>University of Michigan Hospital, MCIT Support Center, Ann Arbor, MI</h3>
+                <date>Sep. 2011-Dec. 2011</date></p> 
+                <ul>
+                    <li>Conducted employee interviews</li>
+                    <li>Built five models (flow, sequence, culture, physical, artifact) to analyze the client's workflow and communication flow</li>
+                    <li>Identified the communication breakdowns in the workflow and provided recommendations for improvement </li>
+                </ul>  
+                <p><h3>Modeling of Urban Road Intersection, Beijing, China</h3>
+                <date>Dec. 2010-Jun. 2011</date></p>
+                <ul>
+                    <li>Designed the conceptual model of the most typical road intersection in Beijing based on the theory of Cellular Automaton</li> 
+                </ul>
+                <p><h3>Design and Development of URTDB, Beijing, China </h3>
+                <date> May. 2009-Feb. 2010</date></p>
+                <ul>
+                   <li>Participated in the design and development webpages for the urban railroad transportation information platform</li>  
+                   <li>Reorganized the railroad data in the database</li>
+                   <li>Researched the railroad information of developed countries</li>
+              	</ul>
+        </div>
+        
+        <div class="col-2">
+            <img src="images/resume_me.png">
+            <div class="text">
+                <h2>Skills</h2>
+                <h3>Programming:</h3><br>
+                <p>+++ HTML, CSS</p>
+                <p>+++ JavaScript, jQuery</p>
+                <p>+++ Java, php</p>
+                <p>+++ Python</p>
+                <br>
+                <h3>Software/Platforms:</h3><br>
+                <p>+++ Drupal, Magento</p>
+                <p>+++ Photoshop, Illustrator</p>
+                <p>+++ InDesign, Bridge</p>
+                <p>+++ Axure</p>
+                <p>+++ SPSS, R</p>
+                <p>+++ Oracle, SQL Server, phpMyAdmin</p>
+                <br>
+                <h3>Languages:</h3><br>
+                <p>Mandarin (Native)</p>
+                <p>English (Fluent)</p>
+                <br>
+        	</div>
+        </div>
+      </div>
+    </div>
+<!-------------------------------------Contact----------------------------------------->
+    <div class="section_contact" id="section4">
+  		<div class="contact">
+        	<div class="col-left-2">
+                <h1>Find Me</h1><br>
+                <a href="http://www.facebook.com/compass1001" target="_blank"><img src="images/facebook.png"/></a>
+                <a href="https://twitter.com/compass1001" target="_blank"><img src="images/twitter.png" /></a>
+                <a href="https://plus.google.com/u/0/102088223607947877633/posts" target="_blank"><img src="images/google+.png" /></a>
+                <a href="http://www.linkedin.com/profile/view?id=230875024&trk=tab_pro" target="_blank"><img src="images/linkedin.png"/></a>
+                <p><span style="font-weight:bold">Tel:</span> 734.276.3827</p>
+                <p><span style="font-weight:bold">Email:</span> nandong@umich.edu</p>
+                <p><span style="font-weight:bold">Address:</span> </p>
+                <p>1815 Pointe Crossing Street</p>
+                <p>Ann Arbor, MI  48105</p>
+             </div>
+             <div class="col-right-2">
+             	<h1>Maps</h1><br>
+        			<a href="https://maps.google.com/maps?q=1815+pointe+crossing+street&ie=UTF-8&hq=&hnear=0x883cae7f7a16f207:0x254d7e3fbd87f5cd,1815+Pointe+Crossing+St,+Ann+Arbor,+MI+48105&gl=us&daddr=1815+Pointe+Crossing+St,+Ann+Arbor,+MI+48105&ei=-pIaUcboE-qO2QX0zYCgDw&ved=0CDQQwwUwAA" target="_blank"><img src="images/maps.png"></a>
+             </div>
+        </div>
+    </div>
+</div>
+<!--------------Footer--------------->
+<div id="footer">
+		<p>&copy Copyright Nan Dong's Reserved &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 1815 Pointe Crossing Street, Ann Arbor, MI  48105 Phone 1 734.276.3827</p>
+</div>
+    </body>
+</html>
+
