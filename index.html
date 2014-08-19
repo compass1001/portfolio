@@ -13,34 +13,6 @@
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.colorbox.js"></script>
     <script type="text/javascript" src="js/portfolio.js"></script>
-    <script type="text/javascript" src="js/iframeResizer.min.js"></script>
-    <script>
-	iFrameResize({
-		log                     : true,                  // Enable console logging
-		enablePublicMethods     : true,                  // Enable methods within iframe hosted page
-		resizedCallback         : function(messageData){ // Callback fn when resize is received
-			$('p#callback').html(
-				'<b>Frame ID:</b> '    + messageData.iframe.id +
-				' <b>Height:</b> '     + messageData.height +
-				' <b>Width:</b> '      + messageData.width + 
-				' <b>Event type:</b> ' + messageData.type
-			);
-		},
-		messageCallback         : function(messageData){ // Callback fn when message is received
-			$('p#callback').html(
-				'<b>Frame ID:</b> '    + messageData.iframe.id +
-				' <b>Message:</b> '    + messageData.message
-			);
-			alert(messageData.message);
-		},
-		closedCallback         : function(id){ // Callback fn when iFrame is closed
-			$('p#callback').html(
-				'<b>IFrame (</b>'    + id +
-				'<b>) removed from page.</b>'
-			);
-		}
-	});
-    </script>
 </head>
 
 <body>
@@ -118,7 +90,7 @@ If you are interested, <span>get in touch</span>!
 <!-------------------------------------Projects----------------------------------------->
 <div id ="projects" class="section">
     <div id="project-1" class="project odd first">
-	    <div class="title-bar">
+	<div class="title-bar">
 	    <img src="images/project-1.png" />
 	    <div class="project-title">Totally Promotional Websites</div>
 	</div>
@@ -132,7 +104,7 @@ If you are interested, <span>get in touch</span>!
 	    <div class="project-title">Michigan Elder Justice Initiative Website</div>
 	</div>
 	<div class="project-content">
-	    <iframe src="meji.html" scrolling=no></iframe>
+	    <iframe src="meji.html"></iframe>
 	</div>
     </div>
     <div class="project odd">
@@ -198,8 +170,7 @@ If you are interested, <span>get in touch</span>!
     <div class="col-1">
 	<h1>NAN DONG</h1><a href="Resume_Nan Dong.pdf" target="_blank"><img src="images/download.png" /></a>
 	<p><h2>Education</h2></p>
-	<!------------------Education---------------->
-		
+	<!------------------Education---------------->	
 	<p><h3>University of Michigan, School of Information, Ann Arbor, MI</h3><date> May 2013</date></p>
 	<li>Master of Science in Information, Information Economics for Management (IEM) & Social Computing (SC)</li>
 	<h3>Beijing Jiaotong University (BJTU), School of Economics and Management, Beijing</h3><date>Jun. 2011</date>
@@ -208,7 +179,7 @@ If you are interested, <span>get in touch</span>!
 	<p><h2>Work Experience</h2></p>
 	<p><h3>Totallypromotional|Casad Company, Web Developer, Celina, OH</h3>
 	<date>Nov. 2013-Present</date></p>
-	 <ul>
+	<ul>
 	    <li>Developing Magento Based websites</li>
 	</ul>
 	<p><h3>Legal Services of South Central Michigan, Web Designer and Developer Intern, Ann Arbor, MI</h3>
@@ -222,9 +193,9 @@ If you are interested, <span>get in touch</span>!
 	<ul>
 	    <li>Designed and developed the website of <a href="http://briefbankdev.mplp.org/" target="_blank">Brief Bank</a></li>
 	    <li>Assisted in uploading new content to the Michigan Legal Help website</li>
-				<li>Assisted in conducting quality assurances measures of web content</li>
-				<li>Tested topical legal interviews created using HotDocs and A2J</li>
-				<li>Updated the Drupal modules of the websites administrated by MPLP</li>
+	    <li>Assisted in conducting quality assurances measures of web content</li>
+	    <li>Tested topical legal interviews created using HotDocs and A2J</li>
+	    <li>Updated the Drupal modules of the websites administrated by MPLP</li>
 	</ul>
 	
 	<p><h3>UFIDA Government Affairs Software Co. Ltd., Implementation Consultant, Beijing</h3>
@@ -264,27 +235,24 @@ If you are interested, <span>get in touch</span>!
     </div>
     
     <div class="col-2">
-	<img src="images/resume_me.png">
+	<img src="images/resume_me.png" />
 	<div class="text">
 	    <h2>Skills</h2>
-	    <h3>Programming:</h3><br>
+	    <h3>Programming:</h3>
 	    <p>+++ HTML, CSS</p>
 	    <p>+++ JavaScript, jQuery</p>
 	    <p>+++ Java, php</p>
 	    <p>+++ Python</p>
-	    <br>
-	    <h3>Software/Platforms:</h3><br>
+	    <h3>Software/Platforms:</h3>
 	    <p>+++ Drupal, Magento</p>
 	    <p>+++ Photoshop, Illustrator</p>
 	    <p>+++ InDesign, Bridge</p>
 	    <p>+++ Axure</p>
 	    <p>+++ SPSS, R</p>
 	    <p>+++ Oracle, SQL Server, phpMyAdmin</p>
-	    <br>
-	    <h3>Languages:</h3><br>
+	    <h3>Languages:</h3>
 	    <p>Mandarin (Native)</p>
 	    <p>English (Fluent)</p>
-	    <br>
 	</div>
     </div>
 </div>

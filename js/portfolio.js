@@ -116,6 +116,10 @@ jQuery( document ).ready(function() {
                         jQuery('#slider-row-' + row).append(toBeContinued);
                 }
         }
+        jQuery("iframe").each(function(index,element){
+                var height=jQuery(document).height();
+                jQuery(this).height(height);
+        });
         var lastRow = '<div class="slider-row"><img src="../images/ancient-lady/to-be-continued.jpg" /></div>';  
         jQuery('#slider').append(lastRow);
         jQuery(".slider-nav button").click(function(){
@@ -138,9 +142,9 @@ jQuery( document ).ready(function() {
                         var scrollFlag = 1;
                 };
                 jQuery(slides).slice(start,end).each(function(index, element){
-    var slideWidth = jQuery(this).width();
-                        scrollWidth += (slideWidth + 10);
-});
+                        var slideWidth = jQuery(this).width();
+                        scrollWidth += (slideWidth + 12);
+                });
                 scrollWidth = scrollFlag * scrollWidth;
                 jQuery(sliderRow).animate({"margin-left": "-=" + scrollWidth},500);
                 currentSlideNo[rowNo - 1] = parseInt(slideNo);
@@ -150,8 +154,8 @@ jQuery( document ).ready(function() {
                 var rows = jQuery(this).parent().next().find('.slider-row');
                 var scrollHeight = 0;
                 jQuery("#slider-nav-vertical button").each(function(index, element) {
-    jQuery(this).removeClass("current");
-});
+                        jQuery(this).removeClass("current");
+                });
                 jQuery(this).addClass("current");
                 if(currentRowNo >= rowNo){
                         var start = rowNo - 1;
@@ -166,12 +170,12 @@ jQuery( document ).ready(function() {
                 console.log("start:" + start);
                 console.log("end:" + end)
                 jQuery(rows).slice(start,end).each(function(index, element){
-    var rowHeight = jQuery(this).height();
+                        var rowHeight = jQuery(this).height();
                         scrollHeight += (rowHeight + 10);
                         var i = 0;
                         console.log(i + ":" + scrollHeight);
                         i++;
-});
+                });
                 scrollHeight = scrollFlag * scrollHeight;
                 jQuery(slider).animate({"margin-top": "-=" + scrollHeight},500);
                 console.log("rowNo:" + currentRowNo)

@@ -396,6 +396,8 @@ area[for="project"]{
 }
 iframe{
 	width:100%;
+	border:none;
+	background:white;
 }
 /*----------------Resume----------------------*/
 .section .resume{}
