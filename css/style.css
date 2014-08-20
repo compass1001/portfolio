@@ -327,7 +327,7 @@ button{
 	display:inline-block;
 	color:rgba(0,0,0,0);
 	z-index:103;
-	position:relative;
+	position:absolute;
 }
 .design-prev{
 	background:url(../images/buttons.png) no-repeat top left;
@@ -337,7 +337,7 @@ button{
 }
 .design-next{
 	background:url(../images/buttons.png) no-repeat bottom left;
-	float: right;
+	right: 0;
 }
 .design-next.hidden{
 	display:none;

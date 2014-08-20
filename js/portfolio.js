@@ -116,9 +116,13 @@ jQuery( document ).ready(function() {
                         jQuery('#slider-row-' + row).append(toBeContinued);
                 }
         }
-        jQuery("iframe").each(function(index,element){
+        /*jQuery("iframe").each(function(index,element){
                 var height=jQuery(document).height();
                 jQuery(this).height(height);
+        });*/
+        $('iframe').load(function() {
+                this.style.height =
+                this.contentWindow.document.body.offsetHeight + 'px';
         });
         var lastRow = '<div class="slider-row"><img src="../images/ancient-lady/to-be-continued.jpg" /></div>';  
         jQuery('#slider').append(lastRow);
