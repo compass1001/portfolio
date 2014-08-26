@@ -60,7 +60,9 @@ jQuery( document ).ready(function() {
         });
         var sectionDesignHeight = screenHeight - headerHeight - footerHeight;
         jQuery('#slider-container').height(sectionDesignHeight - 40);
-
+        jQuery('iframe').load(function(){
+                jQuery(this).height(sectionDesignHeight-100);
+        });
         
         for(var i = 0; i < totalRows; i++){
                 var rowNo = i + 1;
@@ -116,14 +118,6 @@ jQuery( document ).ready(function() {
                         jQuery('#slider-row-' + row).append(toBeContinued);
                 }
         }
-        /*jQuery("iframe").each(function(index,element){
-                var height=jQuery(document).height();
-                jQuery(this).height(height);
-        });*/
-        $('iframe').load(function() {
-                this.style.height =
-                this.contentWindow.document.body.offsetHeight + 'px';
-        });
         var lastRow = '<div class="slider-row"><img src="../images/ancient-lady/to-be-continued.jpg" /></div>';  
         jQuery('#slider').append(lastRow);
         jQuery(".slider-nav button").click(function(){
@@ -274,6 +268,8 @@ jQuery( document ).ready(function() {
          
         $(".project-title").click(function(){
                 $(this).parent().next( ".project-content" ).slideToggle( "slow" );
+                var projectId = $(this).parents(".project").attr("id");
+                window.location.hash = projectId;
         });
         $(".project").each(function(index,element){
                 $(this).css("top",-index * 130);
@@ -291,5 +287,7 @@ jQuery( document ).ready(function() {
         });
         $("area[for='project']").click(function(){
                 $(this).parents(".project").find( ".project-content" ).slideToggle( "slow" );
+                var projectId = $(this).parents(".project").attr("id");
+                window.location.hash = projectId;
         });
 });
