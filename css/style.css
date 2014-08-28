@@ -149,6 +149,7 @@ span{
 .circle-container{
 	display:inline-block;
 	vertical-align:middle;
+	cursor: pointer;
 }
 .circle{
 	height:140px;
@@ -383,14 +384,13 @@ button{
 	position:relative;
 	top:-110px;
 	margin:auto;
-	font-weight:bold;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:comic sans Ms, Helvetica, Arial, sans-serif;
 	cursor:pointer;
 	z-index:99;
 }
 .project-title a{
 	text-decoration: none;
-	color: white;
+	color: #F8F8F8;
 }
 .project{
 	position:relative;

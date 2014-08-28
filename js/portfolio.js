@@ -118,7 +118,16 @@ jQuery( document ).ready(function() {
                         jQuery('#slider-row-' + row).append(toBeContinued);
                 }
         }
-        var lastRow = '<div class="slider-row"><img src="../images/ancient-lady/to-be-continued.jpg" /></div>';  
+        var lastRow = '<div class="slider-row"><img src="../images/ancient-lady/to-be-continued.jpg" /></div>';
+        jQuery('.circle-project').click(function(){
+                var linkTo = $(this).attr("link");
+                console.log(linkTo);
+                var myTop = $("#" + linkTo).offset().top-20;
+                $('html, body').animate({
+                        scrollTop: myTop
+                }, 800);
+        });
+        
         jQuery('#slider').append(lastRow);
         jQuery(".slider-nav button").click(function(){
                 var rowNo = jQuery(this).parent().attr("id").substr(11);
@@ -268,8 +277,12 @@ jQuery( document ).ready(function() {
          
         $(".project-title").click(function(){
                 $(this).parent().next( ".project-content" ).slideToggle( "slow" );
-                var projectId = $(this).parents(".project").attr("id");
-                window.location.hash = projectId;
+                //var projectId = $(this).parents(".project").attr("id");
+               // window.location.hash = projectId;
+                var myTop = $(this).parents('.project').offset().top-20;
+                $('html, body').animate({
+                        scrollTop: myTop
+                }, 500);
         });
         $(".project").each(function(index,element){
                 $(this).css("top",-index * 130);
@@ -287,7 +300,11 @@ jQuery( document ).ready(function() {
         });
         $("area[for='project']").click(function(){
                 $(this).parents(".project").find( ".project-content" ).slideToggle( "slow" );
-                var projectId = $(this).parents(".project").attr("id");
-                window.location.hash = projectId;
+                //var projectId = $(this).parents(".project").attr("id");
+                //window.location.hash = projectId;
+                var myTop = $(this).parents('.project').offset().top-20;
+                $('html, body').animate({
+                        scrollTop: myTop
+                }, 500);
         });
 });
