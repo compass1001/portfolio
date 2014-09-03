@@ -1,7 +1,8 @@
 currentSlideNo = [1,1,1,1];
 currentRowNo = 1;
 totalImages = 45;
-rowNames = ["Web Design", "Slider", "Logo","Business Cards", "Mobile","Brochure","Poster","Cards"]
+rowNames = ["Web Design", "Slider", "Logo","Business Cards", "Mobile","Brochure","Poster","Cards"];
+projectNames = ["totallypromotional","meji.html","694.html","mplp.html","ufida.html","501.html","544.html","601.html"];
 arr = [11, 21, 25, 30, 32, 36, 39, 45];
 totalRows = arr.length;
 jQuery(window).load(function(){
@@ -47,22 +48,20 @@ function buttonDisplay(num){
                 jQuery(".design-next").addClass("hidden");
         }
 }
+
 jQuery('#header').css("background","red");
 jQuery( document ).ready(function() {
         screenWidth = jQuery(window).width();
         screenHeight = jQuery(window).height();
-        headerHeight = jQuery('#header').height();
+        headerHeight = jQuery('#header-wrapper').height();
         footerHeight = jQuery('#footer').height();
-        
         jQuery(".section").css({
                 "min-height":screenHeight,
-                "padding-top": headerHeight + 20
+                "padding-top": headerHeight + 20    
         });
         var sectionDesignHeight = screenHeight - headerHeight - footerHeight;
         jQuery('#slider-container').height(sectionDesignHeight - 40);
-        jQuery('iframe').load(function(){
-                jQuery(this).height(sectionDesignHeight-100);
-        });
+        
         
         for(var i = 0; i < totalRows; i++){
                 var rowNo = i + 1;
@@ -276,6 +275,7 @@ jQuery( document ).ready(function() {
         });
          
         $(".project-title").click(function(){
+                var project = $(this).parents(".project");
                 $(this).parent().next( ".project-content" ).slideToggle( "slow" );
                 //var projectId = $(this).parents(".project").attr("id");
                // window.location.hash = projectId;
@@ -283,6 +283,14 @@ jQuery( document ).ready(function() {
                 $('html, body').animate({
                         scrollTop: myTop
                 }, 500);
+                var project = $(this).parents(".project");
+                var projectId = project.attr("id");
+                //projectId = parseInt(projectId.split('-')[1]) - 1;
+                project.find("iframe").height(sectionDesignHeight-100);
+                //console.log(sectionDesignHeight);
+                //var projectFrame = "<iframe src='" + projectNames[projectId] + "'></iframe>";
+                //project.find(".project-content").append(projectFrame);
+                
         });
         $(".project").each(function(index,element){
                 $(this).css("top",-index * 130);
