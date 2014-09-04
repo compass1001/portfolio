@@ -405,6 +405,14 @@ iframe{
 	border:none;
 	background:white;
 }
+.project-logo{
+	width: 25%;
+	display: inline-block;
+	float: left;
+}
+.project-logo img{
+	width: 100%;
+}
 /*----------------Resume----------------------*/
 .section .resume{}
 .col-1{

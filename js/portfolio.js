@@ -117,10 +117,9 @@ jQuery( document ).ready(function() {
                         jQuery('#slider-row-' + row).append(toBeContinued);
                 }
         }
-        var lastRow = '<div class="slider-row"><img src="../images/ancient-lady/to-be-continued.jpg" /></div>';
+        var lastRow = '<div class="last"><img src="images/continued.png" /></div>';
         jQuery('.circle-project').click(function(){
                 var linkTo = $(this).attr("link");
-                console.log(linkTo);
                 var myTop = $("#" + linkTo).offset().top-20;
                 $('html, body').animate({
                         scrollTop: myTop
@@ -167,26 +166,20 @@ jQuery( document ).ready(function() {
                         var start = rowNo - 1;
                         var end = currentRowNo - 1;
                         var scrollFlag = -1;
-                        console.log(start);
                 }else{
                         var start = currentRowNo - 1;
                         var end = rowNo - 1;
                         var scrollFlag = 1;
                 }
-                console.log("start:" + start);
-                console.log("end:" + end)
                 jQuery(rows).slice(start,end).each(function(index, element){
                         var rowHeight = jQuery(this).height();
                         scrollHeight += (rowHeight + 10);
                         var i = 0;
-                        console.log(i + ":" + scrollHeight);
                         i++;
                 });
                 scrollHeight = scrollFlag * scrollHeight;
                 jQuery(slider).animate({"margin-top": "-=" + scrollHeight},500);
-                console.log("rowNo:" + currentRowNo)
                 currentRowNo = parseInt(rowNo);
-                console.log("currentRowNo:" + currentRowNo);
         });
         jQuery(".slider-row img").click(function(){
                 jQuery(".slider-row img").each(function(index, element) {
